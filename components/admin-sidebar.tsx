@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import { Sidebar, SidebarHeader, SidebarContent } from "./ui/sidebar"
 
 const nav = [
   { href: "/admin", label: "Overview" },
@@ -16,12 +17,12 @@ const nav = [
 export function AdminSidebar() {
   const pathname = usePathname()
   return (
-    <aside className="w-60 shrink-0 border-r bg-white">
-      <div className="p-4">
+    <Sidebar className="w-60 shrink-0 border-r bg-white">
+      <SidebarHeader className="p-4">
         <h2 className="text-xl font-semibold text-balance">Admin</h2>
         <p className="text-sm text-muted-foreground">Smart Scheduler</p>
-      </div>
-      <nav className="flex flex-col gap-1 p-2">
+      </SidebarHeader>
+      <SidebarContent className="flex flex-col gap-1 p-2">
         {nav.map((item) => (
           <Link
             key={item.href}
@@ -34,7 +35,7 @@ export function AdminSidebar() {
             {item.label}
           </Link>
         ))}
-      </nav>
-    </aside>
+      </SidebarContent>
+    </Sidebar>
   )
 }
