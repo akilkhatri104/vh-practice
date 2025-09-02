@@ -104,7 +104,7 @@ export default function AdminTimetablePage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-semibold">Timetable Management</h1>
+          <h1 className="text-2xl font-bold">Timetable Management</h1>
           <p className="text-muted-foreground">
             Create and manage class schedules for different batches
           </p>
@@ -134,7 +134,7 @@ export default function AdminTimetablePage() {
         <>
           {/* Action Buttons */}
           <div className="flex items-center gap-2">
-            <Button onClick={handleAutoSchedule} variant="default" className="bg-blue-600 hover:bg-blue-700">
+            <Button onClick={handleAutoSchedule} variant="default">
               Auto Schedule
             </Button>
             <Button onClick={handleClearAll} variant="outline">
